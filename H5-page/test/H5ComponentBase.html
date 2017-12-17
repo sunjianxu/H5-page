@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>H5ComponentBase</title>
+    <link rel="stylesheet" href="../css/H5ComponentBase.css">
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        body {
+            background-color: #000;
+        }
+        .iphone {
+            width: 340px;
+            height: 540px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -170px;
+            margin-top: -270px;
+            background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div class="iphone">
+
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/H5ComponentBase.js"></script>
+<script>
+    var cfg = {
+        type:'base',
+        text: '这是一段内容',
+        width: 514,
+        height: 306,
+        bg: '../img/human.png',
+        css: {
+            bottom:0,
+            opacity:0
+        },
+        animateIn: {bottom:80,opacity:1},
+        animateOut: {bottom:0,opacity:0},
+        center: true,
+
+    };
+    var h5 = new H5ComponentBase('myName',cfg);
+    $('.iphone').append(h5);
+    var leave = true;
+    $('body').click(function () {
+        leave = !leave;
+        $('.h5_component').triggerHandler(leave ? 'onLeave':'afterLoad');
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>测试页面</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/jquery.fullpage.js"></script>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        .component {
+            background-color: #eeeeee;
+            width:50% ;
+            height: 100px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#pageWrapper").fullpage({
+                "sectionsColor":['red',"blue","green"],
+                'onLeave':function (index,nextIndex,direction) {
+                    //滚动前(离开前)的回调函数,index是要离开的页面的序号，
+                    // nextIndex是要滚动到的页面的序号，direction是方向
+//                    console.log(index);
+//                    console.log(nextIndex);
+//                    console.log(direction);
+//                    triggerHandler()不会触发事件冒泡
+                    $('#pageWrapper').find('.page').eq(index - 1).triggerHandler('onLeave');
+
+                },
+                'afterLoad': function (anchorLink,index) {
+                    //滚动到某一屏后的回调函数
+                    // anchorLink是锚点链接的名称
+                    // index是页面序号
+//                    console.log(anchorLink);
+//                    console.log(index);
+                    $('#pageWrapper').find('.page').eq(index - 1).triggerHandler('afterLoad');
+
+                }
+            });
+            $('.page').on('onLeave', function () {
+                console.log($(this).attr('id') + '=========>onleave');
+                $(this).find('.component').fadeOut();
+            });
+            $('.page').on('afterLoad', function () {
+                console.log($(this).attr('id')+ '=========>alterload');
+                $(this).find('.component').fadeIn();
+
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+<!--用来测试页面切换等的页面-->
+<div id="pageWrapper">
+    <div class="page logo section" id="page1">
+        <div class="component logo">logo</div>
+        <div class="component slogan">slogan</div>
+    </div>
+    <div class="page  section" id="page2">
+        <div class="component desc">desc</div>
+    </div>
+    <div class="page  section" id="page3">
+        <div class="component bar">bar</div>
+    </div>
+</div>
+</body>
+</html>

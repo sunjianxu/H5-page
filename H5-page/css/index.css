@@ -1,0 +1,91 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+/*第二屏---第九屏的背景图*/
+.h5_page {
+    background: url(../img/bg-page.png)no-repeat;
+}
+/*第一屏的背静图*/
+.h5_page_face {
+    background: url(../img/bg-face.png) no-repeat;
+}
+/*slogan摆动的动画效果*/
+@-webkit-keyframes rock {
+    0%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    5%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    10%{  -webkit-transform: rotate(-4deg);  -moz-transform: rotate(-4deg);  -ms-transform: rotate(-4deg);  -o-transform: rotate(-4deg);  transform: rotate(-4deg);  }
+    15%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    20%{  -webkit-transform: rotate(-2deg);  -moz-transform: rotate(-2deg);  -ms-transform: rotate(-2deg);  -o-transform: rotate(-2deg);  transform: rotate(-2deg);  }
+    25%{  -webkit-transform: rotate(1deg);  -moz-transform: rotate(1deg);  -ms-transform: rotate(1deg);  -o-transform: rotate(1deg);  transform: rotate(1deg);  }
+    30%{  -webkit-transform: rotate(-1deg);  -moz-transform: rotate(-1deg);  -ms-transform: rotate(-1deg);  -o-transform: rotate(-1deg);  transform: rotate(-1deg);  }
+    70%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    100%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+}
+@-o-keyframes rock {
+    0%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    5%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    10%{  -webkit-transform: rotate(-4deg);  -moz-transform: rotate(-4deg);  -ms-transform: rotate(-4deg);  -o-transform: rotate(-4deg);  transform: rotate(-4deg);  }
+    15%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    20%{  -webkit-transform: rotate(-2deg);  -moz-transform: rotate(-2deg);  -ms-transform: rotate(-2deg);  -o-transform: rotate(-2deg);  transform: rotate(-2deg);  }
+    25%{  -webkit-transform: rotate(1deg);  -moz-transform: rotate(1deg);  -ms-transform: rotate(1deg);  -o-transform: rotate(1deg);  transform: rotate(1deg);  }
+    30%{  -webkit-transform: rotate(-1deg);  -moz-transform: rotate(-1deg);  -ms-transform: rotate(-1deg);  -o-transform: rotate(-1deg);  transform: rotate(-1deg);  }
+    70%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    100%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+}
+@-moz-keyframes rock {
+    0%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    5%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    10%{  -webkit-transform: rotate(-4deg);  -moz-transform: rotate(-4deg);  -ms-transform: rotate(-4deg);  -o-transform: rotate(-4deg);  transform: rotate(-4deg);  }
+    15%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    20%{  -webkit-transform: rotate(-2deg);  -moz-transform: rotate(-2deg);  -ms-transform: rotate(-2deg);  -o-transform: rotate(-2deg);  transform: rotate(-2deg);  }
+    25%{  -webkit-transform: rotate(1deg);  -moz-transform: rotate(1deg);  -ms-transform: rotate(1deg);  -o-transform: rotate(1deg);  transform: rotate(1deg);  }
+    30%{  -webkit-transform: rotate(-1deg);  -moz-transform: rotate(-1deg);  -ms-transform: rotate(-1deg);  -o-transform: rotate(-1deg);  transform: rotate(-1deg);  }
+    70%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    100%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+}
+@keyframes rock {
+    0%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    5%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    10%{  -webkit-transform: rotate(-4deg);  -moz-transform: rotate(-4deg);  -ms-transform: rotate(-4deg);  -o-transform: rotate(-4deg);  transform: rotate(-4deg);  }
+    15%{  -webkit-transform: rotate(3deg);  -moz-transform: rotate(3deg);  -ms-transform: rotate(3deg);  -o-transform: rotate(3deg);  transform: rotate(3deg);  }
+    20%{  -webkit-transform: rotate(-2deg);  -moz-transform: rotate(-2deg);  -ms-transform: rotate(-2deg);  -o-transform: rotate(-2deg);  transform: rotate(-2deg);  }
+    25%{  -webkit-transform: rotate(1deg);  -moz-transform: rotate(1deg);  -ms-transform: rotate(1deg);  -o-transform: rotate(1deg);  transform: rotate(1deg);  }
+    30%{  -webkit-transform: rotate(-1deg);  -moz-transform: rotate(-1deg);  -ms-transform: rotate(-1deg);  -o-transform: rotate(-1deg);  transform: rotate(-1deg);  }
+    70%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+    100%{  -webkit-transform: rotate(0deg);  -moz-transform: rotate(0deg);  -ms-transform: rotate(0deg);  -o-transform: rotate(0deg);  transform: rotate(0deg);  }
+}
+
+.h5_component_name_slogan  {
+    -webkit-animation:rock 2s 2s infinite;
+    -o-animation:rock 2s 2s infinite;
+    animation:rock 2s 2s infinite;
+}
+
+/*第二屏*/
+.h5_component_name_caption {
+    width:249.5px;
+    height: 62px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    top:68px;
+    background: url(../img/caption.png) no-repeat;
+    background-size: contain;
+}
+.h5_component_name_description  {
+    box-sizing: border-box;
+}
+
+/*最后一屏*/
+/*回到首页按钮的动画*/
+@-webkit-keyframes back { 50% {  top: 15px;  } }
+@-o-keyframes back { 50% {  top: 15px;  } }
+@-moz-keyframes back { 50% {  top: 15px;  } }
+@keyframes back {50% {  top: 15px;  } }
+.h5_component_name_back {
+    -webkit-animation:back 2s 2s infinite;
+    -o-animation: back 2s 2s infinite;
+    animation:back 2s 2s infinite;
+}

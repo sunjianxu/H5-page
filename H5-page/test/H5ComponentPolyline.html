@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>H5ComponentPlayLine</title>
+    <link rel="stylesheet" href="../css/H5ComponentBase.css">
+    <link rel="stylesheet" href="../css/H5ComponentPolyline.css">
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        body {
+            background-color: #000;
+        }
+        .iphone {
+            width: 340px;
+            height: 540px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin-left: -170px;
+            margin-top: -270px;
+            background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+<!--测试H5ComponentPolyLine对象（折线图图组件）-->
+<div class="iphone">
+
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/H5ComponentBase.js"></script>
+<script src="../js/H5ComponentPolyline.js"></script>
+<script>
+    var cfg = {
+        type:'polyline',
+        text: '这是一段内容',
+        width: 530,
+        height: 400,
+        data: [['HTML/CSS',.2], ['JS',.4, '#ff7676'], ['Vue',.3], ['React',.35], ['Bootstrap',.25]],
+        css: {top:100, opacity:0},
+        animateIn: {opacity:1,top:200},
+        animateOut: {opacity:0,top:100},
+        center: true,
+
+    };
+    var h5 = new H5ComponentPolyline('myBarComponent',cfg);
+    $('.iphone').append(h5);
+    var leave = true;
+    $('body').click(function () {
+        leave = !leave;
+        $('.h5_component').triggerHandler(leave ? 'onLeave':'afterLoad');
+
+    })
+</script>
+</body>
+</html>
